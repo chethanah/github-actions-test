@@ -26,7 +26,7 @@ jobs:
       - name: Push to wiki
         run: |
           cd $GITHUB_WORKSPACE/${{github.repository}}.wiki
-          echo "## Hello World `date`" > test.md
+          echo -e "## Hello World \n `date`" > test.md
           git config --local user.email "action@github.com"
           git config --local user.name "GitHub Action"
           git add .
